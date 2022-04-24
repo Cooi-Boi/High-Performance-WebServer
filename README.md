@@ -13,7 +13,7 @@
 ## Ststem Requires:
 
   支持Ubuntu/CentOS/Debian, etc.  
-  编写环境于Ubuntu 20.04
+  编写环境于Ubuntu 20.04 g++ 4.8.5
 
 ## Packages Required:
 
