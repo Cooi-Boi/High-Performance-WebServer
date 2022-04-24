@@ -81,12 +81,12 @@ class Channel : public NonCopyAble {
     loop_->Update(this);
   }
 
-  void SetReceivedEvents(int events) {
-    recv_events_ = events;
+  void SetReceivedEvents(int events__) {
+    recv_events_ = events__;
   }
 
-  void SetChannelState(ChannelState state) {
-    state_ = state;
+  void SetChannelState(ChannelState state__) {
+    state_ = state__;
   }
 
   int fd() const { return fd_; } 

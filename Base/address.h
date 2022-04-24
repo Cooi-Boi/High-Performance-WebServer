@@ -14,12 +14,12 @@ class Address {
   const int port_;
 
  public:
-  Address(const char* port = "2022") : ip_("0.0.0.0"), port_(atoi(port)) {}
-  Address(const int port = 2022) : ip_("0.0.0.0"), port_(port) {}
-  Address(const char* ip, const char* port) 
-      : ip_(ip), port_(atoi(port)) {}
-  Address(const char* ip, const int port) 
-      : ip_(ip), port_(port) {}
+  Address(const char* port__ = "2022") : ip_("0.0.0.0"), port_(atoi(port__)) {}
+  Address(const int port__ = 2022) : ip_("0.0.0.0"), port_(port__) {}
+  Address(const char* ip__, const char* port__) 
+      : ip_(ip__), port_(atoi(port__)) {}
+  Address(const char* ip__, const int port__) 
+      : ip_(ip__), port_(port__) {}
 
   const char* ip() const { return ip_; }
   int port() const { return port_; }

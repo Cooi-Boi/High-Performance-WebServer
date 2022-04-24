@@ -15,23 +15,23 @@ HttpRequest::HttpRequest() {}
 HttpRequest::~HttpRequest() {}
 
 bool HttpRequest::ParseRequestMethod(const char* start, const char* end) {
-  string method(start, end);
+  string request_method(start, end);
   bool has_method = true;
-  if (method == "GET") {
+  if (request_method == "GET") {
     method_ = kGet;
-  } else if (method == "POST") {
+  } else if (request_method == "POST") {
     method_ = kPost;
-  } else if (method == "PUT") {
+  } else if (request_method == "PUT") {
     method_ = kPut;
-  } else if (method == "DELETE") {
+  } else if (request_method == "DELETE") {
     method_ = kDelete;
-  } else if (method == "TRACE") {
+  } else if (request_method == "TRACE") {
     method_ = kTrace;
-  } else if (method == "OPTIONS") {
+  } else if (request_method == "OPTIONS") {
     method_ = kOptions;
-  } else if (method == "CONNECT") {
+  } else if (request_method == "CONNECT") {
     method_ = kConnect;
-  } else if (method == "PATCH") {
+  } else if (request_method == "PATCH") {
     method_ = kPatch;
   } else {
     has_method = false;
@@ -57,10 +57,10 @@ bool HttpRequest::ParseRequestLine(const char* start, const char* end) {
     return false;
   }
 
-  const char* query = std::find(start, end, '?'); 
-  if (query != end) {
-    path_.assign(start, query);
-    query_.assign(query + 1, space);
+  const char* query_ptr = std::find(start, end, '?'); 
+  if (query_ptr != end) {
+    path_.assign(start, query_ptr);
+    query_.assign(query_ptr + 1, space);
   } else {
     path_.assign(start, space);
   }        

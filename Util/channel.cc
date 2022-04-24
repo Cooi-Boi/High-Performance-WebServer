@@ -6,9 +6,9 @@
 using namespace tiny_muduo;
 
 Channel::Channel(EventLoop* loop,
-                 const int& fd)
+                 const int& fd__)
     : loop_(loop),
-      fd_(fd),
+      fd_(fd__),
       events_(0),
       recv_events_(0),
       tied_(false),

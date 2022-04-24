@@ -52,7 +52,9 @@ ThreadData(ThreadFunc& func, Latch* latch, const string& name)
 void RunOneFunc() {
   latch_->CountDown();
   latch_ = nullptr;  
-  ::prctl(PR_SET_NAME, name_.size() == 0 ? ("WorkThread " + std::__cxx11::to_string(thread_id_++)).data() : name_.data());
+  char buf[32] = {0};
+  snprintf(buf, sizeof(buf), "%d", (thread_id_++));
+  ::prctl(PR_SET_NAME, name_.size() == 0 ? ("WorkThread " + string(buf)).data() : name_.data());
   func_();
 }
 

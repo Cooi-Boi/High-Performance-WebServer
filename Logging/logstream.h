@@ -32,16 +32,16 @@ class FixedBuffer : public NonCopyAble {
   FixedBuffer();
   ~FixedBuffer();
 
-  inline static void CookieStart();
-  inline static void CookieEnd();
+  static void CookieStart();
+  static void CookieEnd();
 
-  void Append(const char* data, int len) {
-    if (writablebytes() < len) {
-      len = writablebytes();
+  void Append(const char* input_data, int length) {
+    if (writablebytes() < length) {
+      length = writablebytes();
     }
 
-    memcpy(cur_, data, len);
-    cur_ += len;
+    memcpy(cur_, input_data, length);
+    cur_ += length;
   }
 
   void SetBufferZero() {
@@ -51,7 +51,7 @@ class FixedBuffer : public NonCopyAble {
 
   void SetCookie(void (*cookie)()) { cookie_ = cookie; } 
 
-  void Add(int len) { cur_ += len; }
+  void Add(int length) { cur_ += length; }
 
   const char* data() const { return buf_; }
   int len() const { return static_cast<int>(cur_ - buf_); }

@@ -12,10 +12,10 @@
 
 using namespace tiny_muduo;
 
-TcpConnection::TcpConnection(EventLoop* loop, int connfd, int id) 
-    : loop_(loop),
+TcpConnection::TcpConnection(EventLoop* loop__, int connfd, int id__) 
+    : loop_(loop__),
       fd_(connfd),
-      connection_id_(id),
+      connection_id_(id__),
       state_(kConnecting),
       channel_(new Channel(loop_, fd_)),
       shutdown_state_(false) {
