@@ -17,7 +17,7 @@
 
 ## Packages Required:
 
-  `g++`  
+  `g++ >= 4.8.5`  
   `cmake`  
   `make`  
 
