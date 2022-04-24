@@ -46,8 +46,6 @@
   * WebServer采用One Loop Per Thread + Thread Pool编程模式，其内部实现了一个小型Reactor模式的网络库
   
 ## Code Statistics
-  
-   
+  ![image](https://user-images.githubusercontent.com/72536813/164964817-6aa10adb-0519-411c-982d-c853181f89cb.png)
   
 ## Thanks For
-  
