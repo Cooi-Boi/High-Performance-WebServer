@@ -1,0 +1,4 @@
+language: cpp
+compiler: gcc
+install: g++ cmake make
+script: ./build.sh 
