@@ -14,8 +14,8 @@ class Address {
   const int port_;
 
  public:
-  Address(const char* port__ = "2022") : ip_("0.0.0.0"), port_(atoi(port__)) {}
-  Address(const int port__ = 2022) : ip_("0.0.0.0"), port_(port__) {}
+  Address(const char* port__ = "80") : ip_("0.0.0.0"), port_(atoi(port__)) {}
+  Address(const int port__ = 80) : ip_("0.0.0.0"), port_(port__) {}
   Address(const char* ip__, const char* port__) 
       : ip_(ip__), port_(atoi(port__)) {}
   Address(const char* ip__, const int port__) 
