@@ -12,6 +12,8 @@
   
 ## System Requires:
 
+  Linux kernel version >= 2.6.28.
+
   支持Ubuntu/CentOS/Debian, etc.  
   编写环境于Ubuntu 20.04 g++ 4.8.5
 
