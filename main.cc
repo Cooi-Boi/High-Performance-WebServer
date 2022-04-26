@@ -82,7 +82,7 @@ int main(int argc, char* argv[])
   EventLoop loop;
   Address listen_address(argv[1]);
   HttpServer server(&loop, listen_address);
-  server.SetThreadNums(6);
+  server.SetThreadNums(4);
   server.SetHttpResponseCallback(HttpResponseCallback);
   server.Start();
   loop.Loop();
