@@ -10,7 +10,7 @@
   **[Love 6's CSDN Blog](https://love6.blog.csdn.net)**  
   **[实现C++ High-Performance WebServer全流程记录（基于muduo网络库）](https://love6.blog.csdn.net/article/details/123754194)**
   
-## Ststem Requires:
+## System Requires:
 
   支持Ubuntu/CentOS/Debian, etc.  
   编写环境于Ubuntu 20.04 g++ 4.8.5
