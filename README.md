@@ -45,6 +45,7 @@
   * 采用优雅断开服务器连接方式，避免直接Close而丢失双方仍未发出或接受的数据  
   * 采用C++11 std::move移动函数避免大量不必要的拷贝动作  
   * 采用提前准备一个空的文件描述符，在面对服务器文件描述符耗尽时关闭/接受/再关闭的方法，有效避免因描述符耗尽而导致服务器Busy Loop  
+  * 采用有限状态机分析TCP字节流是否为HTTP包，高效的解析HTTP请求中的URI以及HTTP头部参数，采用unordered_map来记录参数方便使用  
   * WebServer采用One Loop Per Thread + Thread Pool编程模式，其内部实现了一个小型Reactor模式的网络库
   
 ## Code Statistics
