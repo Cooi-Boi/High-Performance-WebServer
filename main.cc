@@ -75,7 +75,7 @@ int main(int argc, char* argv[]) {
   // SetFlushFunc(AsyncFlushFunc);
   // asynclog->StartAsyncLogging();
 
-  // NOTE: for benchmark
+  // NOTE : for benchmark
   // SetLogLevel(Logger::Level::ERROR);
   
   EventLoop loop;
