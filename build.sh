@@ -2,11 +2,11 @@
 
 set -x
 
-if [ ! -d "./Build" ];then
+if [ ! -d "./Build" ]; then
   mkdir ./Build 
 fi
 
-if [ ! -d "./LogFiles" ];then
+if [ ! -d "./LogFiles" ]; then
   mkdir ./LogFiles
 fi
 
